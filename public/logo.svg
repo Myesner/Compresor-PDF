@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- background rounded square -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="#6C4DF6"/>
+  <!-- paper sheet -->
+  <g>
+    <path d="M150 96 h142 l70 70 v250 a22 22 0 0 1 -22 22 H150 a22 22 0 0 1 -22 -22 V118 a22 22 0 0 1 22 -22 z" fill="#FFFFFF"/>
+    <!-- folded corner -->
+    <path d="M292 96 l70 70 h-70 z" fill="#EAE6FD"/>
+    <path d="M292 96 l70 70 h-58 a12 12 0 0 1 -12 -12 z" fill="#D8D1FA"/>
+    <!-- text lines -->
+    <rect x="164" y="220" width="150" height="16" rx="8" fill="#E6E2D8"/>
+    <rect x="164" y="256" width="184" height="16" rx="8" fill="#E6E2D8"/>
+    <rect x="164" y="292" width="120" height="16" rx="8" fill="#E6E2D8"/>
+  </g>
+  <!-- converging compression arrows (violet on white would vanish over sheet edges, use deep violet) -->
+  <g fill="#4B2EDB">
+    <!-- left arrow pointing right -->
+    <path d="M104 330 l64 42 v-26 h44 a10 10 0 0 1 0 20 h-44 v-26 z" transform="rotate(180 158 351)"/>
+    <!-- right arrow pointing left -->
+    <path d="M408 330 l-64 42 v-26 h-44 a10 10 0 0 0 0 20 h44 v-26 z"/>
+  </g>
+  <!-- accent coral squeeze ticks -->
+  <g stroke="#FF5C38" stroke-width="14" stroke-linecap="round">
+    <line x1="120" y1="368" x2="156" y2="368"/>
+    <line x1="392" y1="368" x2="356" y2="368"/>
+  </g>
+</svg>

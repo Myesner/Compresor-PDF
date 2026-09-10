@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 33% 97%;        /* paper #FAF9F5 */
+    --foreground: 261 22% 10%;       /* ink #17141F */
+    --card: 0 0% 100%;
+    --card-foreground: 261 22% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 261 22% 10%;
+    --primary: 251 90% 63%;          /* violet #6C4DF6 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 24% 93%;         /* paper-deep #F1EEE7 */
+    --secondary-foreground: 261 22% 10%;
+    --muted: 45 24% 93%;
+    --muted-foreground: 262 9% 37%;  /* ink-soft #5B5566 */
+    --accent: 252 85% 95%;           /* violet-soft #EAE6FD */
+    --accent-foreground: 253 72% 52%;/* violet-deep #4B2EDB */
+    --destructive: 12 100% 61%;      /* coral #FF5C38 */
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 22% 87%;            /* line #E6E2D8 */
+    --input: 45 22% 87%;
+    --ring: 251 90% 63%;
+    --radius: 0.75rem;
+    --sidebar-background: 48 33% 97%;
+    --sidebar-foreground: 261 22% 10%;
+    --sidebar-primary: 251 90% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 252 85% 95%;
+    --sidebar-accent-foreground: 253 72% 52%;
+    --sidebar-border: 45 22% 87%;
+    --sidebar-ring: 251 90% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: auto; /* Lenis handles smoothing */
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2 {
+    @apply font-display font-bold;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+  }
+  h3, h4, h5, h6 {
+    @apply font-display font-medium;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  ::selection {
+    background: #6C4DF6;
+    color: #ffffff;
+  }
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+}
+
+@layer utilities {
+  /* Subtle grain overlay (use with /noise.svg) */
+  .noise-overlay {
+    background-image: url('/noise.svg');
+    background-size: 256px 256px;
+    opacity: 0.04;
+    pointer-events: none;
+  }
+  .hero-radial {
+    background:
+      radial-gradient(60% 55% at 78% 12%, rgba(234, 230, 253, 0.95) 0%, rgba(234, 230, 253, 0) 70%),
+      #FAF9F5;
+  }
+  .text-gradient-violet {
+    background: linear-gradient(135deg, #6C4DF6, #9B7BFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .badge-gradient {
+    background: linear-gradient(135deg, #6C4DF6, #9B7BFF);
+  }
+}
