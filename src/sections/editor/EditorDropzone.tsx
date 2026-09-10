@@ -64,7 +64,7 @@ export default function EditorDropzone({ onFile, loading }: EditorDropzoneProps)
         )}
       >
         <motion.img
-          src="/empty-state.png"
+          src={`${import.meta.env.BASE_URL}empty-state.png`}
           alt=""
           animate={dragOver ? { y: -8, scale: 1.05 } : { y: [0, -6, 0] }}
           transition={

@@ -16,7 +16,7 @@ const NAV_LINKS = [
 export function Logo({ dark = false }: { dark?: boolean }) {
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label="PDFácil — inicio">
-      <img src="/logo.svg" alt="" className="h-9 w-9 rounded-xl" />
+      <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="" className="h-9 w-9 rounded-xl" />
       <span className={cn('font-display text-xl font-bold tracking-tight', dark ? 'text-white' : 'text-ink')}>
         PDF<span className="text-violet">á</span>cil
       </span>

@@ -21,7 +21,7 @@ export default function ComoFunciona() {
           { text: 'navegador.', className: 'text-violet' },
         ]}
         lead="PDFácil funciona como una app instalada, pero vive en una pestaña. Todo el trabajo pesado lo hacen bibliotecas de código abierto ejecutándose en tu dispositivo."
-        imageSrc="/local-shield.png"
+        imageSrc={`${import.meta.env.BASE_URL}local-shield.png`}
         imageAlt="Portátil protegido por un escudo: tus archivos nunca se suben a la nube"
         imageWidthClassName="max-w-[480px]"
       />

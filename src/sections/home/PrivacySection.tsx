@@ -91,7 +91,7 @@ export default function PrivacySection() {
 
           <div className="flex items-center justify-center">
             <motion.img
-              src="/local-shield.png"
+              src={`${import.meta.env.BASE_URL}local-shield.png`}
               alt="Un portátil protegido por un escudo: nada se sube a la nube"
               className="w-full max-w-[480px]"
               width={1000}

@@ -22,7 +22,7 @@ export default function Privacidad() {
         underlineWord="Literalmente."
         underlineColor="#25C685"
         lead="PDFácil no tiene servidores de procesamiento. Tus PDFs se abren, comprimen y editan dentro de tu navegador, y se evaporan al cerrar la pestaña. Esta página explica lo poco (casi nada) que recopilamos."
-        imageSrc="/local-shield.png"
+        imageSrc={`${import.meta.env.BASE_URL}local-shield.png`}
         imageAlt="Portátil protegido por un escudo: nada se sube a la nube"
         imageWidthClassName="max-w-[420px]"
       />

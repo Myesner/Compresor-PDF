@@ -106,7 +106,7 @@ function HeroArt() {
         className="relative"
       >
         <img
-          src="/hero-pages.png"
+          src={`${import.meta.env.BASE_URL}hero-pages.png`}
           alt="Hojas PDF flotando, una de ellas comprimida por dos flechas"
           className="w-full max-w-[560px] drop-shadow-xl"
           width={1200}

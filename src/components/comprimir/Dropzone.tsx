@@ -119,7 +119,7 @@ export default function Dropzone({ compact, onFiles, disabled = false }: Dropzon
               className="flex flex-col items-center"
             >
               <motion.img
-                src="/empty-state.png"
+                src={`${import.meta.env.BASE_URL}empty-state.png`}
                 alt=""
                 animate={{ scale: dragOver ? 1.05 : 1 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}

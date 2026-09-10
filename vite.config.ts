@@ -4,10 +4,10 @@ import { defineConfig } from "vite"
 import { inspectAttr } from 'plugin-inspect-react-code'
 
 // https://vite.dev/config/
-export default defineConfig({
-  // Base del sitio en GitHub Pages: https://myesner.github.io/Compresor-PDF/
-  // Para desarrollo local Vite ignora el base siempre que sea una ruta absoluta.
-  base: '/Compresor-PDF/',
+export default defineConfig(({ command }) => ({
+  // En build (GitHub Pages) el sitio vive bajo /Compresor-PDF/;
+  // en dev se sirve en la raíz de localhost:3000 como siempre.
+  base: command === 'build' ? '/Compresor-PDF/' : '/',
   plugins: [inspectAttr(), react()],
   server: {
     port: 3000,
@@ -17,4 +17,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+}))
